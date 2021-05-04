@@ -8,18 +8,18 @@ Requirements
 ------------
 
 * Deposit and Withdrawal
-* Transfer
-* Account statement (date, amount, balance)
+* Transfer to another account
+* Account statement (date, credit, debit, balance)
 * Statement printing
 * Statement filters (just deposits, withdrawal, date)
 
 Statement should have transactions in the following format:
 
 ```
-  DATE       | AMOUNT  | BALANCE
-  10/04/2014 | 500.00  | 1400.00
-  02/04/2014 | -100.00 | 900.00
-  01/04/2014 | 1000.00 | 1000.00
+   date        | credit    | debit     | balance
+   14/01/2012  |           | 500.00    | 2500.00
+   13/01/2012  | 2000.00   |           | 3000.00
+   10/01/2012  | 1000.00   |           | 1000.00
 ```
 
 
@@ -43,12 +43,9 @@ Implementation Guidelines
 **Note:** Start with an acceptance test through the Account class:
 
     public class Account {
-
-        public void deposit(int amount);
-
-        public void withdraw(int amount);
-
-        public void printStatement();
+        deposit(amount);
+        withdraw(amount);
+        printStatement();
     }
 
 You are not allowed to add any other methods to that class
