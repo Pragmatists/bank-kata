@@ -8,9 +8,9 @@ Requirements
 ------------
 
 * Deposit and Withdrawal
-* Transfer to another account
 * Account statement (date, credit, debit, balance)
 * Statement printing
+* Transfer to another account
 * Statement filters (just deposits, withdrawal, date)
 
 Statement should have transactions in the following format:
